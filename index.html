@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Portal</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f6f9; color: #333; margin: 0; padding: 20px; }
+        .container { max-width: 700px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .job-details { border-bottom: 2px solid #eee; margin-bottom: 25px; padding-bottom: 20px; }
+        .job-details h1 { margin-top: 0; color: #0056b3; }
+        .meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px; background: #f8f9fa; padding: 15px; border-radius: 6px; }
+        label { font-weight: bold; display: block; margin-top: 15px; margin-bottom: 5px; }
+        input, select, textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        textarea { height: 120px; resize: vertical; }
+        button { background-color: #0056b3; color: white; border: none; padding: 12px 20px; font-size: 16px; font-weight: bold; border-radius: 4px; cursor: pointer; width: 100%; margin-top: 20px; }
+        button:hover { background-color: #004494; }
+        #msg { margin-top: 15px; font-weight: bold; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="job-details">
+        <h1>Software Developer</h1>
+        <div class="meta-grid">
+            <div><strong>Company:</strong> Demo Technologies Pvt Ltd</div>
+            <div><strong>Location:</strong> Hyderabad</div>
+            <div><strong>Experience:</strong> 0-2 Years</div>
+            <div><strong>Skills:</strong> Java, SQL, HTML, CSS</div>
+        </div>
+        <p><strong>Job Description:</strong> We are seeking a passionate Associate Software Developer to join our core technical engineering crew. You will design, develop, test, and optimize full-stack serverless web applications and database integrations.</p>
+    </div>
+
+    <h2>Apply Now</h2>
+    <form id="appForm">
+        <label>Full Name</label>
+        <input type="text" id="fullName" required>
+
+        <label>Email Address</label>
+        <input type="email" id="email" required>
+
+        <label>Phone Number</label>
+        <input type="tel" id="phoneNumber" required>
+
+        <label>Highest Qualification</label>
+        <input type="text" id="qualification" required>
+
+        <label>Years of Experience</label>
+        <input type="number" id="experience" min="0" required>
+
+        <label>Your Skills</label>
+        <input type="text" id="skills" placeholder="e.g. Java, Python, React" required>
+
+        <label>Cover Letter</label>
+        <textarea id="coverLetter" required></textarea>
+
+        <button type="submit">Apply Now</button>
+    </form>
+    <div id="msg"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
